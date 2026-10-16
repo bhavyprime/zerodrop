@@ -15,6 +15,7 @@ async function main() {
   console.log('[db] connected');
 
   const server = http.createServer(createApp());
+  server.requestTimeout = 30 * 60 * 1000;
   const wss = attachWebSocket(server);
   const cleanup = startCleanupJob();
 
