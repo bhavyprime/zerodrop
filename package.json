@@ -1,0 +1,16 @@
+{
+  "name": "temporary-drop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Share once. Disappear forever. Accountless, expiring, download-limited file sharing.",
+  "scripts": {
+    "setup": "npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -k -n api,web -c blue,magenta \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server test && npm --prefix client test"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}

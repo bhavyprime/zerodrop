@@ -1,0 +1,54 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-chalk: #edf1f3;
+  --color-paper: #f9fbfc;
+  --color-ink: #14232d;
+  --color-slate: #4f606c;
+  --color-line: #c7d2d9;
+  --color-signal: #3346f2;
+  --color-signal-deep: #2433c4;
+  --color-signal-wash: #e3e7fd;
+  --color-amber: #a95f00;
+  --color-ember: #b83232;
+
+  --font-sans: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Spline Sans Mono Variable', ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    background: var(--color-chalk);
+  }
+  body {
+    @apply bg-chalk font-sans text-ink antialiased;
+    min-height: 100vh;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-signal);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--color-signal);
+    color: white;
+  }
+}
+
+/* When a drop is destroyed, each digit of its code dissolves in turn. */
+@keyframes dissolve {
+  to {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-8px);
+  }
+}
+.digit-gone {
+  animation: dissolve 0.9s ease-in forwards;
+  animation-delay: calc(var(--i) * 110ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .digit-gone {
+    animation-duration: 0.01s;
+    animation-delay: 0s;
+  }
+}

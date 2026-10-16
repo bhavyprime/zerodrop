@@ -1,0 +1,27 @@
+{
+  "name": "temporary-drop-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Temporary Drop API: accountless, expiring, download-limited file sharing",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "mongoose": "^9.11.2",
+    "multer": "^2.4.0",
+    "node-cron": "^4.6.0",
+    "qrcode": "^1.5.4",
+    "ws": "^8.22.0"
+  }
+}
