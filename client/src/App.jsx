@@ -29,7 +29,7 @@ export default function App() {
           <span aria-hidden="true" className="grid size-7 place-items-center rounded-lg bg-signal">
             <span className="size-2.5 rounded-full bg-white" />
           </span>
-          Temporary Drop
+          Zero Drop
         </Link>
         <nav aria-label="Main" className="flex gap-1">
           <NavLink to="/" end className={navClass}>
