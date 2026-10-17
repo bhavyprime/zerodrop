@@ -3,7 +3,7 @@ import { getSenderStatus } from './api.js';
 
 export function usePageTitle(title) {
   useEffect(() => {
-    document.title = title ? `${title} · Temporary Drop` : 'Temporary Drop';
+    document.title = title ? `${title} · Zero Drop` : 'Zero Drop';
   }, [title]);
 }
 
